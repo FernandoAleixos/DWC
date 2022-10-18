@@ -1,0 +1,20 @@
+-El elemento con id 'input2'
+document.getElementById('input2');
+
+-La colección de párrafos
+document.getElementsByTagName('p');
+
+-Lo mismo pero sólo de los párrafos que hay dentro del div 'lipsum'
+document.getElementById('lipsum').getElementsByTagName('p');
+
+-El formulario (ojo, no la colección con el formulario sino sólo el formulario)
+document.querySelector('form');
+
+-Todos los inputs
+
+
+-Sólo los inputs con nombre 'sexo'
+document.getElementByName('sexo');
+
+-Los items de lista de la clase 'important' (sólo los LI)
+document.querySelectAll('li.important');

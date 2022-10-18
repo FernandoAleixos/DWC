@@ -1,0 +1,17 @@
+Obtén desde la consola, al menos de 2 formas:
+
+    -El innerHTML de la etiqueta de 'Escoge sexo'
+    document.querySelector('form').lastElementChild.previousElementSibling.innerHTML
+    document.getElementsByTagName('label')[3].innerHTML
+
+    -El textContent de esa etiqueta
+    document.querySelector('form').lastElementChild.previousElementSibling.textContent
+    document.getElementsByTagName('label')[3].innerHTML
+
+    -El valor del primer input de sexo
+    document.querySelector('form').lastElementChild.previousElementSibling.getElementsByTagName('input')[0].value
+
+
+    -El valor del sexo que esté seleccionado (difícil, búscalo por Internet)
+    document.getElementsByName()
+    document.querySelector('input[name="sexo"]checked').value

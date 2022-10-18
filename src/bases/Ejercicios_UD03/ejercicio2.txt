@@ -1,0 +1,13 @@
+Siguiento con la página de ejemplo obtén desde la consola, al menos de 2 formas diferentes:
+    -El primér párrafo que hay dentro del div 'lipsum'
+    document.getElementById('lipsum').firstElementChild
+
+    -El segundo párrafo de 'lipsum'
+    document.querySelectorAll('p')[2]
+    document.getElementById('lipsum').firstElementChild.nextElementSibling
+
+    -El último item de la lista
+    document.getElementsByTagName('li')[3]
+
+    -La label de 'Escoge sexo'
+    document.getElementsByTagName('label')[3]
