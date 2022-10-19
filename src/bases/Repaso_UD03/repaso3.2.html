@@ -1,0 +1,38 @@
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div id="contenido">
+        <article>
+            <h1>Ejercicio 3.2 Repaso</h1>
+            <div class="text">
+                <p>Esta es una página web de prueba.</p>
+                <p>En ella practicaremoa con los métodos másbásicos de consulta y manipulación del DOM.</p>
+                <p>La página contiene <span id="parrafos"></span>párrafos</p>
+            </div>
+        </article>
+    </div>
+    <script>
+        /*
+        Se pide completar la función modificaDOM, de forma que formateo la página según lossiguientes criterios:
+            -El elemento con id="contenido" tenga un color de fondo #00ffff y un padding de 5px
+            -Todos los artículos que aparezcan, tendrán un color de fondo #eeeeee,
+            -Todos los elementos de tipos h1 tengan un color de texto #555555
+            -Todos los párrafos aparezcan en cursiva.
+
+        Además, tendrá que mostrar en el span con id="parrafos" la cantidad de párrafos que hay enla página.
+        */
+        onload = modificaDOM; 
+        function modificaDOM(){
+            let content = document.getElementById('contenido');
+            content.style.background = '#00ffff';
+
+            let titulos = document.getElementsByTagName('h1');
+            titulos.style.background = '#eeeeee';
+
+        }
+    </script>
+</body>
+
+</html>
