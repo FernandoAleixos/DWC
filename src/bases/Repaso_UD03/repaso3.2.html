@@ -19,7 +19,7 @@
             -El elemento con id="contenido" tenga un color de fondo #00ffff y un padding de 5px
             -Todos los artículos que aparezcan, tendrán un color de fondo #eeeeee,
             -Todos los elementos de tipos h1 tengan un color de texto #555555
-            -Todos los párrafos aparezcan en cursiva.
+            -Todos los párrafos que aparezcan en cursiva.
 
         Además, tendrá que mostrar en el span con id="parrafos" la cantidad de párrafos que hay enla página.
         */
@@ -28,8 +28,12 @@
             let content = document.getElementById('contenido');
             content.style.background = '#00ffff';
 
-            let titulos = document.getElementsByTagName('h1');
-            titulos.style.background = '#eeeeee';
+            let articulos = document.querySelectorAll('article').forEach(elemento => elemento.style.background = '#eeeeee');
+
+            let titulos = document.querySelectorAll('h1').forEach(elemento => elemento.style.color = '#555555');
+
+            let parrafos = document.querySelectorAll('p').forEach(prr => prr.style.text);
+            
 
         }
     </script>
