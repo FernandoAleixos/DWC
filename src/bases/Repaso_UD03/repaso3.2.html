@@ -24,16 +24,18 @@
         Además, tendrá que mostrar en el span con id="parrafos" la cantidad de párrafos que hay enla página.
         */
         onload = modificaDOM; 
+
         function modificaDOM(){
             let content = document.getElementById('contenido');
             content.style.background = '#00ffff';
+            content.style.padding = '5px';
 
             let articulos = document.querySelectorAll('article').forEach(elemento => elemento.style.background = '#eeeeee');
 
-            let titulos = document.querySelectorAll('h1').forEach(elemento => elemento.style.color = '#555555');
+            let titulos = document.querySelector('h1');
+            titulos.style.color = '#555555';
 
-            let parrafos = document.querySelectorAll('p').forEach(prr => prr.style.text) = '<p<style>font-style: italic;</style>></p>';
-            
+            let parrafos = document.querySelectorAll('p').forEach(prr => prr.style.fontStyle = 'italic');
 
         }
     </script>

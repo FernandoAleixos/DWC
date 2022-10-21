@@ -37,21 +37,15 @@
             let entrada = prompt("Escribe una cadena de texto:");
             let cadena = entrada.split('');
 
-            if(cadena.some(letra => letra == letra.toLocaleUpperCase())){
+            if(cadena.some(letra => letra === letra.toLocaleUpperCase())){
                 console.log('Hay mayúculas');
             }
-            if(cadena.some(letra => letra == letra.toLocaleLowerCase())) {
+            if(cadena.some(letra => letra === letra.toLocaleLowerCase())) {
                 console.log('Hay minúsculas');
             }
 
             console.log(`La posición 3 la ocupa el carácter: ${cadena[2]}`);
             console.log(`La cadena tiene ${cadena.length} carácteres`);
-
-            /*
-            if(cadena.includes('a')) {
-                console.log(`El carácter 'a' aparece por primera vez en la posición ${cadena.indexOf('a')}`);
-            }*/
-
             console.log(`El carácter 'a' aparece por primera vez en la posición ${cadena.indexOf('a')}`);
             console.log(`El carácter 'a' aparece por última vez en la posición ${cadena.lastIndexOf('a')}`);
             console.log(`La cadena empieza por '${cadena[0]}'`);
