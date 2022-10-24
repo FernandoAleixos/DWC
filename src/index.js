@@ -8,5 +8,8 @@
 
 let entrada = prompt('Introduce un codi postal:');
 let cp = /[1-4][0-9]{4}/;
+let nif = /^[0-9]{8}(-|)[a-zA-Z]$/;
+
+
 
 console.log(cp.test(entrada));
