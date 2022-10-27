@@ -14,8 +14,10 @@ divContenedor.addEventListener('dblclick', function(event) {
         let div1 = document.getElementsByTagName('div')[0];
         let div2 = document.getElementsByTagName('div')[1];
 
-        if(event.target.parent == ) { //Buscamos si esta en el primer div
-
+        if(event.target.parentNode == div1.parentNode.firstChild) { //Buscamos si esta en el primer div
+            div1.appendChild(event);
+        } else {
+            div2.appendChild(event);
         }
     } 
 })
