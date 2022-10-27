@@ -10,12 +10,11 @@ let divContenedor = document.getElementById('contenedor');
 //Creamos el exucuchador en el div padre ("contenedor")
 divContenedor.addEventListener('dblclick', function(event) {
     //Si el evento es igual que la etiqueta "p"
-    if(event.target == 'P') { 
-        let parrafos = document.querySelectorAll('p');
+    if(event.target.getElementsByTagName('p') == 'P') { 
+        let div1 = document.getElementsByTagName('div')[0];
+        let div2 = document.getElementsByTagName('div')[1];
 
-        parrafos.addEventListener('dblclick', );
-
-        if() { //Buscamos si esta en el primer div
+        if(event.target.parent == ) { //Buscamos si esta en el primer div
 
         }
     } 
