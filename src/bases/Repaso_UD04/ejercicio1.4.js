@@ -7,17 +7,19 @@ Se pide completar añadir una función que se ejecute cuando cargue la página y
 
 let divContenedor = document.getElementById('contenedor');
 
+
 //Creamos el exucuchador en el div padre ("contenedor")
 divContenedor.addEventListener('dblclick', function(event) {
     //Si el evento es igual que la etiqueta "p"
-    if(event.target.getElementsByTagName('p') == 'P') { 
-        let div1 = document.getElementsByTagName('div')[0];
-        let div2 = document.getElementsByTagName('div')[1];
+       
+    if(event.target.tagName == 'P') { 
+        let div1 = document.getElementsByTagName('div')[1];
+        let div2 = document.getElementsByTagName('div')[2];
 
-        if(event.target.parentNode == div1.parentNode.firstChild) { //Buscamos si esta en el primer div
-            div1.appendChild(event);
+        if(event.target.parentNode == div1) { //Buscamos si esta en el primer div
+            div2.appendChild(event.target);
         } else {
-            div2.appendChild(event);
+            div1.appendChild(event.target);
         }
     } 
 })
