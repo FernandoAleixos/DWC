@@ -27,3 +27,17 @@ function getPosts() {
         }
     });
 }
+
+fetch(SERVER)
+    .then(response => response.json())
+    .then(data => {
+        imagen.appendElementChild(data)
+    });
+
+
+async function obtenerDatos() {
+    const response = await fetch(SERVER);
+    const myData = await response.json();
+
+}
+const myData = await obtenerDatos();
