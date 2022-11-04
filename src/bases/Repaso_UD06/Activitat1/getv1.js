@@ -29,21 +29,3 @@ function getPosts(url) {
         peticion.addEventListener('error', () => reject('Error en el petición'));
     })
 }
-
-/*
-fetch(SERVER)
-    .then(response => response.json())
-    .then(data => {
-        imagen.appendChild(data.message);
-        
-    });
-
-
-async function obtenerDatos() {
-    const response = await fetch(SERVER);
-    const myData = await response.json();
-
-}
-const myData = await obtenerDatos();
-
-*/
