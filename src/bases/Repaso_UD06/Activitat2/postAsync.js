@@ -5,6 +5,7 @@ const boton = document.getElementById('enviar');
 window.addEventListener('load', function() {
     
     boton.addEventListener('click', async (event) => {
+        
         event.preventDefault();
 
         const objeto = {

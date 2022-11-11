@@ -19,8 +19,6 @@ window.addEventListener('load', function() {
           .then(datos => {
             let identificador = document.createElement('p');
 
-            console.log(datos);
-
             identificador.innerHTML = `<br> Esta es la ID del mensaje recivido: ${datos.id}`;
             contenedor.appendChild(identificador);
           });

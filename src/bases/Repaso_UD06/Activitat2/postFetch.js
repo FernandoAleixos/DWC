@@ -26,6 +26,8 @@ boton.addEventListener('click', (event) => {
                 identificador.innerHTML = `<br> Esta es la ID del mensaje recivido: ${datos.id}`;
                 contenedor.appendChild(identificador);
             });
+        } else {
+            console.error('Error en la petición');
         }
-    })
+    }).catch();
 });
