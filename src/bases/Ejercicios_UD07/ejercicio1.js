@@ -1,3 +1,4 @@
+
 let pinta_posicion = (latitude, longitude) => {
     const contenedor = document.getElementById('contenedor');
     const resultado = document.createElement('p');
@@ -8,7 +9,6 @@ let pinta_posicion = (latitude, longitude) => {
 
 
 navigator.geolocation.getCurrentPosition(
-
     (position) => {
       pinta_posicion(position.coords.latitude, position.coords.longitude);
     },
