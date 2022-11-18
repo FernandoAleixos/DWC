@@ -8,12 +8,18 @@ table {
     width: 100%;
     border-collapse: collapse;
     border: 3px solid purple;
+    text-align: center;
 }
 
-thead th:nth-child(1) {
+th {
+    background-color: grey;
+}
+
+tr:nth-child(1) {
     width: 100%;
 }
 
-th, td {
+tr, td {
     padding: 20px;
+    border: solid grey 1px;
 }

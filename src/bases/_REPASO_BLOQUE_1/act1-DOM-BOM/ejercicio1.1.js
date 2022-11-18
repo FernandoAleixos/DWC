@@ -20,7 +20,7 @@ window.addEventListener('load', function() {
     cuerpo.appendChild(div1);
 
     let parrafo = document.createElement('p');
-    parrafo.innerHTML = '<p id="parrafo1"></p>';
+    parrafo.innerHTML = '<p id="parrafo1">Este el el parrafo 1</p>';
     div1.appendChild(parrafo);
 
     /* formulario.addEventListener('submit', event => {
@@ -31,22 +31,28 @@ window.addEventListener('load', function() {
     }); */
 
     const tabla = document.createElement('table');
-    const tr = document.createElement('tr');
-    const td = document.createElement('td');
-
+    let th = document.createElement('th');
     
+    div1.appendChild(tabla);
+    tabla.appendChild(th);
 
     formulario.addEventListener('submit', event => {
         event.preventDefault();
 
         let campo = document.getElementsByTagName('input')[0].value;
 
+        let tr = document.createElement('tr');
+        
+        th.innerHTML = '<th>Valor introducido en el campo de texto</th>';
+        tr.innerHTML = `<tr>${campo}</tr>`;
+
+        tabla.appendChild(tr);
+    });
+
+    tabla.addEventListener('dblclick', (event) => {
+        if(event.target.tagName == 'TR') {
+            console.log('hola');
+            event.target.remove();
+        }
     });
 });
-
-
-
-
-
-
-
