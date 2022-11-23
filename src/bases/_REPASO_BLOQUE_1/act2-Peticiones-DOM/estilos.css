@@ -1,0 +1,33 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  header, h1 {
+    background-color: crimson;
+    padding: 0.25rem;
+  }
+  
+  #contenido div {
+    max-width: 15rem;
+    background-color: whitesmoke;
+  }
+  
+  #contenido h4 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem;
+    font-size: 20px;
+  }
+  
+  #contenido img {
+    max-width: 5rem;
+    margin-left: 5em;
+  }
+  
+  #contenido p {
+    text-align: justify;
+    padding: 1rem;
+    font-size: 14px;
+  }
+  
+  
