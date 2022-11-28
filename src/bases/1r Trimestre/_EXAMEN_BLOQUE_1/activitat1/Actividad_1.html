@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #partida {
+                width: 1024px;
+                height: 768px;
+                background-color: #eeeeee;
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+            .bola {
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                background-color: #aa0000;
+                border-radius: 50%;
+            } 
+            #marcador {
+                width: 200px;
+                height: 150px;
+                position: absolute;
+                left: 1100px;
+                top: 100px;
+                border: 1px solid #333333;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="partida">
+        </div>
+        <div id="marcador">
+            <div>Bolas en pantalla: <span id="bolas">0</span></div>
+            <div>Puntuación: <span id="puntos">0</span></div>
+        </div>
+        
+        <script>
+            // Inicialitzem funcions i variables
+            onload = init
+            let puntuacion = 0;
+            let numBolas = 0;
+
+            function anyadeBola() {
+                // Esta función genera una bola de manera aleatória en la zona de juego
+                let x = Math.floor(1 + Math.random() * 1000);
+                let y = Math.floor(1 + Math.random() * 700);
+
+                let divPartida = document.getElementById('partida');
+                let divBola = document.createElement('div');
+                
+                divBola.className = 'bola';
+
+                divBola.style.top = y;
+                divBola.style.left = x;
+
+                if(numBolas < 15) {
+                    divPartida.appendChild(divBola);
+                    numBolas++;
+                } else {
+                    alert('Has perdido la partida!');
+                    document.location.reload();
+                }
+            }
+            
+            function setTimer(time) {
+                //Esta función establece un temporizador, que emula un setInterval mediante setTimeout. 
+                //La principal diferencia es que con setInterval se ejecuta la función que indicamos cada X tiempo, y un timeout solo se ejecuta una vez. 
+                //La idea de esta función, es establecer un temporizador en un número concreto de milisegundos, y que la última instrucción sea crear otro temporizador, pero con menos tiempo, de forma que las bolas van añadiéndose cada vez más rápido.
+                
+                let timer = setTimeout(function () {
+                    anyadeBola();
+                    setTimer(time * 0.9);
+                }, time);
+            }
+
+            function init() {
+                let divMarcador = document.getElementById('marcador');
+                let marcadorPuntos = document.getElementById('puntos');
+                let marcadorBolas = document.getElementById('bolas');
+                let divPartida = document.getElementById('partida');
+
+                divPartida.addEventListener('click', event => {
+
+                    if (event.target.classList == 'bola') {
+                        puntuacion += 100;
+                        event.target.remove();
+                        numBolas--;
+                        marcadorPuntos.innerHTML = puntuacion;
+                    }
+                    marcadorBolas.innerHTML = numBolas;
+                });                
+                setTimer(2000);
+            }
+        </script>
+    </body>
+</html>

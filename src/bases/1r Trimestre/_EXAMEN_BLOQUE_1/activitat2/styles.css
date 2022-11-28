@@ -1,0 +1,39 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+#cabecera{
+    display:block;
+    width: 100%;
+    height: 100%;
+}
+
+
+#buscador{
+    display:block;
+    width: 100%;
+    height: 100%;
+}
+
+input {
+    width: 100%;
+    padding: 20px 20px;
+    margin: 20px 0;
+    box-sizing: border-box;
+  }
+
+  input[type=submit] {
+    background-color: #dba221;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  #contenido {
+    background-color: #dba221;
+  }
